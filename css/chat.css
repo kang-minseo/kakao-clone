@@ -1,3 +1,17 @@
+.chats-body {
+  padding: 10px 0px;
+}
+
+.chats-body .header,
+.chats-body .status-bar {
+  padding: 0px 20px;
+}
+
+.chat-screen {
+  background-image: url("../images/chatBg.png");
+  min-height: 100vh;
+}
+
 .chat__write {
   position: fixed;
   bottom: 50px;
@@ -15,34 +29,22 @@
     0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px rgba(0, 0, 0, 0.025);
 }
 
-.chats-body {
-  padding: 0;
-}
-.chats-body .header,
-.chats-body .status-bar {
-  padding: 0px 20px;
-}
-
-.chat-screen {
-  background-image: url("../images/chatBg.png");
-  min-height: 100vh;
-}
-
 .chat__write i {
   font-size: 22px;
 }
 
-.chart__write-column:nth-child(2) {
+.chat__write-column:nth-child(2) {
   width: 80%;
 }
 
-.chart__write-column input {
-  padding: 10px;
+.chat__write-column input {
+  padding: 20px 10px;
   width: 100%;
   border: none;
   font-size: 14px;
 }
-.chart__write-column input:focus {
+
+.chat__write-column input:focus {
   outline: none;
 }
 
@@ -51,6 +53,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   padding: 0px 20px;
   padding-top: 30px;
 }
@@ -70,12 +73,7 @@
 .message {
   display: flex;
   align-items: flex-start;
-  width: 50%;
   margin-bottom: 20px;
-}
-
-.message .message__content {
-  width: 80%;
 }
 
 .incoming-message {
@@ -94,23 +92,27 @@
 
 .message .message__bubble {
   background-color: white;
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 8px 16px -8px,
-    rgba(0, 0, 0, 0.024) 0px -6px 16px -6px;
+  box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25),
+    0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px rgba(0, 0, 0, 0.025);
   padding: 10px 20px;
-  border-radius: 30px;
+  border-radius: 20px;
+  color: white;
+  font-weight: 600;
 }
 
 .incoming-message .message__author {
-  margin-top: 10px;
+  margin-top: 25px;
   display: block;
   font-weight: 600;
   font-size: 12px;
 }
 
 .incoming-message .message__bubble {
-  border-bottom-left-radius: 0;
+  border-bottom-left-radius: 0px;
+  background-image: linear-gradient(to right, #7b4397, #dc2430);
 }
 
-.incoming-message .sent-message {
-  border-bottom-right-radius: 0;
+.sent-message .message__bubble {
+  border-bottom-right-radius: 0px;
+  background-image: linear-gradient(to left, #00c6ff, #0072ff);
 }
