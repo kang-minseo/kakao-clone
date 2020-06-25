@@ -3,10 +3,6 @@
   justify-content: space-between;
   margin-bottom: 30px;
 
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  width: 100%;
   padding: 4px 10px;
   background-color: #fcfcfc;
 }
